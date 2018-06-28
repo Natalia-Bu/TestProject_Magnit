@@ -42,7 +42,7 @@ public class DBService {
         Statement st = null;
         try {
             st = conn.createStatement();
-            //st.execute("CREATE TABLE IF NOT EXISTS TEST(FIELD INT PRIMARY KEY)");
+            st.execute("CREATE TABLE IF NOT EXISTS TEST(FIELD INT PRIMARY KEY)");
             st.execute("DELETE FROM TEST");
             st.close();
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO TEST VALUES (?)");
